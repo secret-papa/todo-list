@@ -1,0 +1,8 @@
+.root {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: cornsilk;
+    padding: 16px;
+}
