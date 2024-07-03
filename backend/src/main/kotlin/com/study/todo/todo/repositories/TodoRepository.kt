@@ -1,7 +1,6 @@
 package com.study.todo.todo.repositories
 
 import com.study.todo.todo.domains.Todo
-import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.mongodb.repository.MongoRepository
 
-interface TodoRepository: JpaRepository<Todo, String> {
-}
+interface TodoRepository: MongoRepository<Todo, String>

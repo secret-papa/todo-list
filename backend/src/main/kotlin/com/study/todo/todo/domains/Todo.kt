@@ -2,10 +2,11 @@ package com.study.todo.todo.domains
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
+import org.springframework.data.mongodb.core.mapping.Document
 import java.time.Instant
 import java.util.UUID
 
-@Entity
+@Document(collection = "Todo")
 data class Todo (
     @Id
     val id: String = UUID.randomUUID().toString(),
