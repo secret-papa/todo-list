@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        publishTodo-in-0:
+          destination: consumeTodo
+          binder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092

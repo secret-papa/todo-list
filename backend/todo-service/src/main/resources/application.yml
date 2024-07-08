@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: todo
+  cloud:
+    function:
+      definition: handleTodo
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        handleTodo-out-0:
+          destination: todo
+        handleTodo-in-0:
+          destination: todo
